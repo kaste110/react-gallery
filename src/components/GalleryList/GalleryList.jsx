@@ -4,17 +4,17 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 class GalleryList extends Component {
     render() {
-        console.log(this.props.galleryList);
+        console.log(this.props.listOfPhotos);
         return (
-            <p>Hi from Gallery List</p>
-            // <div>
-            //     {this.props.galleryItems.map((galleryItem) => {
-            //         return(
-            //             <GalleryItem />
-            //         )
-            //     })}
+            
+            <>
+                {this.props.listOfPhotos.map((photo) => {
+                    return(
+                        <GalleryItem key={photo.id} photo={photo} />
+                    )
+                })}
 
-            // </div>
+            </>
         );
     };
 };
