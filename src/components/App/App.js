@@ -9,6 +9,10 @@ class App extends Component {
     galleryItems : []
   }
   
+  componentDidMount() {
+    this.getGalleryItems();
+  }
+
   getGalleryItems = () => {
     axios.get('/gallery')
     .then( response => {
